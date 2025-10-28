@@ -40,7 +40,7 @@ async def execute_sponsored_transaction(request: SponsoredTxRequest):
                     signer_address=request.signerAddress,
                     signer_private_key=request.signerPrivateKey
                 )
-                      return result
+                return result
 except Exception as e:
         logger.error(f"Error executing sponsored transaction: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
